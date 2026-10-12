@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Game Website Template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <img class="nav-logo" src="images/logo.png" alt="Game logo">
+    <div class="brand">
+      <span data-site="serverName">GAME</span>
+      <span class="tag" data-site="gameName">Roblox</span>
+    </div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a data-href="rules" href="rules.html">Rules</a>
+      <a data-href="staff" href="staff.html">Team</a>
+      <a href="store.html">Store</a>
+      <a data-href="discord" href="#">Discord</a>
+    </nav>
+    <a class="nav-cta" data-href="store" href="#">Play</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-card">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="status-dot"></span> Servers online</div>
+        <h1 class="hero-title" data-site="serverName">GAME</h1>
+        <p class="hero-tagline" data-site="tagline">Game tagline goes here.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" data-href="store" href="#">▶ Play now</a>
+          <a class="btn btn-ghost" data-href="discord" href="#">Join Discord</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- badge shelf doubles as the stats display -->
+<div class="wrap badge-shelf">
+  <div class="badge">
+    <div class="badge-icon hot">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+      </svg>
+    </div>
+    <div class="badge-val"><span data-site="playersOnline">0</span></div>
+    <div class="badge-label">Playing now</div>
+  </div>
+  <div class="badge">
+    <div class="badge-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+      </svg>
+    </div>
+    <div class="badge-val"><span data-site="playersCap">0</span></div>
+    <div class="badge-label">Server capacity</div>
+  </div>
+  <div class="badge">
+    <div class="badge-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19h15.3l-.62-1.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9zm0 2c3.87 0 7 3.13 7 7 0 1.66-.59 3.18-1.57 4.38L12 9.35l-5.43 7.03C5.59 15.18 5 13.66 5 12c0-3.87 3.13-7 7-7z"/>
+      </svg>
+    </div>
+    <div class="badge-val" data-site="uptime">0%</div>
+    <div class="badge-label">Uptime</div>
+  </div>
+  <div class="badge">
+    <div class="badge-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 5h-2.18C16.24 3.84 15.22 3 14 3h-4C8.78 3 7.76 3.84 7.18 5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-7-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 16H5V7h2v2h10V7h2v12z"/>
+      </svg>
+    </div>
+    <div class="badge-val" data-site="serverVersion">—</div>
+    <div class="badge-label">Current season</div>
+  </div>
+  <div class="badge">
+    <div class="badge-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+      </svg>
+    </div>
+    <div class="badge-val" data-site="foundedYear">—</div>
+    <div class="badge-label">Launched</div>
+  </div>
+</div>
+<div class="wrap ip-caption">
+  Game link: <span id="ip-text" data-site="serverIP">roblox.com/games/…</span>
+  <button data-copy="#ip-text">Copy link</button>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Why play this</div>
+      <h2>Built by devs who still play it</h2>
+      <p class="section-sub">Swap these three cards for whatever actually sets your game apart.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">01</div>
+        <h3>Weekly seasons</h3>
+        <p>Fresh content and a leaderboard reset every week — no stale meta.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">02</div>
+        <h3>Active moderation</h3>
+        <p>Mods online during peak hours, real reports get reviewed.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">03</div>
+        <h3>No pay-to-win</h3>
+        <p>Robux purchases are cosmetic or time-saving only.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Media</div>
+      <h2>Screenshots</h2>
+      <p class="section-sub">Replace these three with real in-game captures — this is the section people check before clicking Play.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-frame"><img src="images/gallery-1.png" alt="Gameplay screenshot"></div>
+      <div class="gallery-frame"><img src="images/gallery-2.png" alt="Gameplay screenshot"></div>
+      <div class="gallery-frame"><img src="images/gallery-3.png" alt="Gameplay screenshot"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© <span data-site="foundedYear">2024</span>–2026 <span data-site="serverName">GAME</span>. Not affiliated with Roblox Corporation.</div>
+    <div class="footer-links">
+      <a data-href="rules" href="rules.html">Rules</a>
+      <a data-href="staff" href="staff.html">Team</a>
+      <a data-href="discord" href="#">Discord</a>
+      <a data-href="vote" href="#">Vote</a>
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
